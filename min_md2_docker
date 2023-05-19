@@ -1,0 +1,33 @@
+#! /bin/bash
+
+# 1) --------- PATH DELLA DIRECTORY CORRENTE PER SCRIVERE SOTTO I PATH ASSOLUTI, NECESSARI IN 4) e 6)
+host_dir=$PWD
+container_dir="/tmp"
+# 2) --------- FILE IN CUI FINIRANNO PATH DEL PROGRAMMA E INSTRUZIONI DI SIMULAZION ---------------------------------------#
+cat <<END> min_md_minosse
+
+#! /bin/bash
+
+# 3) ---------- PATH PER IL PROGRAMMA PER MINOSSE -------------------------------------------------------------------------#
+
+docker run -v $host_dir:$container_dir ubuntu18_withamber16 bash $container_dir/launch_inside_container.sh
+
+END
+
+# 5) ---------- ATTIVAZIONE SCRIPT ----------------------------------------------------------------------------------------#
+chmod u+x min_md_minosse
+
+# 6)---------- SOTTOMISSIONE SCRIPT A MINOSSE E LANCIO SE LE RISORSE DISPONIBILI SONO SUFFICIENTI ------------------------#
+msub -f $host_dir/min_md_minosse -c 2
+
+# 7)NOTA BENE ------------ ^^^ DEVE ESSERE UGUALE AL NUMERO DI PROCESSORI MASSIMO PER SINGOLA ISTRUZIONE DI SIMULAZIONE --#
+
+
+
+
+
+
+
+
+
+ 
