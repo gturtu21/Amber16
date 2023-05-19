@@ -4,8 +4,8 @@ ubuntu18_baseimage is a simple ubuntu18 image where all needed dependencies for 
 https://ambermd.org/doc12/Amber16.pdf
 
 The second image will need the following files and a valid Amber16 license to work:
-AmberTools17.tar.bz2 (it can be download free of charge)
-Amber16.tar.bz2 (it needs a valid license to be downloaded).
+- AmberTools17.tar.bz2 (it can be download free of charge);
+- Amber16.tar.bz2 (it needs a valid license to be downloaded).
 
 The first image can be build as follows:
 ```
