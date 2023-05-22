@@ -17,3 +17,14 @@ docker build -tag ubuntu18_withamber16 .
 ```
 
 It can take up to 20 minutes to build the second image.
+
+
+```
+docker save -o <path_to_image_tarfile>  <image_name>
+```
+Transfer the <path_toimage_tarfile> to the new host, then:
+
+```
+docker load -i <path_to_image_tarfile>  
+```
+
