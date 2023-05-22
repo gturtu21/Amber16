@@ -11,13 +11,11 @@ The first image can be build as follows:
 ```
 docker build -tag ubuntu18_foramber16 .
 ```
+It can take up to 20 minutes to build the second image:
 
 ```
 docker build -tag ubuntu18_withamber16 .
 ```
-
-It can take up to 20 minutes to build the second image.
-
 
 ```
 docker save -o <path_to_image_tarfile>  <image_name>
